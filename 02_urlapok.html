@@ -7,47 +7,48 @@
     <script src="urlapok.js"></script>
 </head>
 <body>
-    <form>
+    <form action="02_urlapok.html" method="POST">
         <div>
             <label for="nev">Név:</label>
-            <input type="text" id="nev">
+            <input type="text" name="nev" id="nev" placeholder="Név">
         </div>
         <div>
             <label for="email">E-mail:</label>
-            <input type="email" id="email">
+            <input type="email" name="email" id="email" placeholder="E-mail">
         </div>
         <div>
-            <label for="">Nem:</label>
-            <input type="radio" id="ferfi">
+            <label>Nem:</label>
+            <input type="radio" name="nem" id="ferfi" value="ferfi">
             <label for="ferfi">Férfi</label>
-            <input type="radio" id="no">
+            <input type="radio" name="nem" id="no" value="no">
             <label for="no">Nő</label>
-            <input type="radio" id="egyeb">
+            <input type="radio" name="nem" id="egyeb" value="egyeb">
             <label for="egyeb">Egyéb / Nem kívánja megadni</label>
         </div>
         <div>
             <label for="vegzettseg">Iskolai végzettség:</label>
-            <select id="vegzettseg">
-                <option>Általános iskola</option>
-                <option>Érettségi</option>
-                <option>Egyetem</option>
+            <select id="vegzettseg" name="vegzettseg">
+                <option value="" selected disabled>Iskolai végzettség</option>
+                <option value="1">Általános iskola</option>
+                <option value="2">Érettségi</option>
+                <option value="3">Egyetem</option>
             </select>
         </div>
         <div>
             <label>Honnan halott rólunk:</label>
-            <input type="checkbox" id="facebook">
+            <input type="checkbox" id="facebook" name="honnan" value="facebook">
             <label for="facebook">Facebook hirdetés</label>
             
-            <input type="checkbox" id="youtube">
+            <input type="checkbox" id="youtube" name="honnan" value="youtube">
             <label for="youtube">Youtube reklám</label>
             
-            <input type="checkbox" id="ismeros">
+            <input type="checkbox" id="ismeros" name="honnan" value="ismeros">
             <label for="ismeros">Ismerős</label>
 
-            <input type="checkbox" id="hirdetotabla">
+            <input type="checkbox" id="hirdetotabla" name="honnan" value="hirdetotabla">
             <label for="hirdetotabla">Hirdető tábla</label>
         </div>
-        <button>Regisztráció</button>
+        <button type="submit">Regisztráció</button>
     </form>
 </body>
 </html>
