@@ -1,11 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS objektumok</title>
 </head>
+
 <body>
-    
+    <dl>
+        <dt>Osztály</dt>
+        <dd>Adatszerkezet leírás. Nem tartalmaz konkrét adatokat, hanem csak a szerkezetet írja le. pl.: Ember osztály, minden embernek van <b>nev</b>e és <b>életkor</b>a</dd>
+        <dt>Objektum</dt>
+        <dd>Az osztály egy példánya. Konkrét adatokat tartalmaz. pl.: Gipsz Jakab - 32 éves, Tóth Márton - 21 éves</dd>
+    </dl>
+    <script>
+        const emberek = [];
+        const gipszjakab = {
+            vezeteknev: "Gipsz",
+            keresztnev: "Jakab",
+            eletkor: 32,
+            teljesnev: function() {
+                //console.log(this);
+                return this.vezeteknev + " " + this.keresztnev;
+            }
+        };
+
+        console.log(gipszjakab.teljesnev);
+        console.log(gipszjakab.teljesnev());
+        const tothmarton = {
+            vezeteknev: "Tóth",
+            keresztnev: "Márton",
+            eletkor: 21,
+            teljesnev: function() {
+                return this.vezeteknev + " " + this.keresztnev;
+            }
+        };
+        emberek.push(gipszjakab);
+        emberek.push(tothmarton);
+        emberek.forEach(function(ember) {
+            console.log(ember.teljesnev());
+        });
+    </script>
 </body>
+
 </html>
