@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Űrlapok</title>
+    <script src="urlapok.js"></script>
+</head>
+<body>
+    <form>
+        <div>
+            <label for="nev">Név:</label>
+            <input type="text" id="nev">
+        </div>
+        <div>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email">
+        </div>
+        <div>
+            <label for="">Nem:</label>
+            <input type="radio" id="ferfi">
+            <label for="ferfi">Férfi</label>
+            <input type="radio" id="no">
+            <label for="no">Nő</label>
+            <input type="radio" id="egyeb">
+            <label for="egyeb">Egyéb / Nem kívánja megadni</label>
+        </div>
+        <div>
+            <label for="vegzettseg">Iskolai végzettség:</label>
+            <select id="vegzettseg">
+                <option>Általános iskola</option>
+                <option>Érettségi</option>
+                <option>Egyetem</option>
+            </select>
+        </div>
+        <div>
+            <label>Honnan halott rólunk:</label>
+            <input type="checkbox" id="facebook">
+            <label for="facebook">Facebook hirdetés</label>
+            
+            <input type="checkbox" id="youtube">
+            <label for="youtube">Youtube reklám</label>
+            
+            <input type="checkbox" id="ismeros">
+            <label for="ismeros">Ismerős</label>
+
+            <input type="checkbox" id="hirdetotabla">
+            <label for="hirdetotabla">Hirdető tábla</label>
+        </div>
+        <button>Regisztráció</button>
+    </form>
+</body>
+</html>
