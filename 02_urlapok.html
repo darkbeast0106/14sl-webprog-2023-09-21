@@ -7,6 +7,26 @@
     <script src="urlapok.js"></script>
 </head>
 <body>
+    <!--
+        Űrlap - <form> tag
+        - action 
+          - melyik oldalra (url) továbbítsa az űrlapot
+          - alapértelmezetten a jelenlegi oldal
+        - method - 2 értéke van: GET / POST
+          - GET 
+            - Megjelenik az url-ben az elküldés után
+            - Felhasználói adat továbbításakor TILOS használni
+            - Oldalon belül, keresésre / szűrésre használható
+          - POST
+            - HTTP kérés tartalmaként kerül elküldésre
+            - Felhasználói adatokat így továbbítunk
+            - HTTPS protok használatakor titkosítva kerül elküldésre.
+    -->
+    <!--
+        name attribútum
+          - Beviteli mezőkbe írt érték ezzel a kulccsal kerül elküldésre, így hivatkozhatunk rá
+          - radio button esetén ez alapján lesznek csoportosítva, hogy csak egy legyen kiválasztható
+    -->
     <form action="02_urlapok.html" method="POST">
         <div>
             <label for="nev">Név:</label>
@@ -48,6 +68,10 @@
             <input type="checkbox" id="hirdetotabla" name="honnan" value="hirdetotabla">
             <label for="hirdetotabla">Hirdető tábla</label>
         </div>
+        <!--
+            ha nincs megadva a gomb típusa akkor submit típusú gomb lesz
+             submit: elküldi az űrlapot a megadott oldalra.
+        -->
         <button type="submit">Regisztráció</button>
     </form>
 </body>
