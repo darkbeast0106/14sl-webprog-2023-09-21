@@ -16,18 +16,30 @@
     </dl>
     <script>
         const emberek = [];
+        // Objektumokat kapcsos zárójelek között tudunk definiálni
+        // Nem kötelező osztályt definiálnunk, mint más nyelvekben
         const gipszjakab = {
             vezeteknev: "Gipsz",
             keresztnev: "Jakab",
             eletkor: 32,
             teljesnev: function() {
+                /*
+                  this 
+                    - ez az elem, az objektum önmagára mutat. 
+                    - this kulszó jelentése eltérhet attól függően, hogy hol használjuk
+                    - jelen esetben a 21. sorban definiált objektumot jelenti.
+                */
                 //console.log(this);
                 return this.vezeteknev + " " + this.keresztnev;
             }
         };
 
-        console.log(gipszjakab.teljesnev);
+        // Függvény referencia került átadásra, a függvény definíciója íródik ki
+        console.log(gipszjakab.teljesnev); 
+
+        // Függvény meghívása, a függvény eredményét írja ki
         console.log(gipszjakab.teljesnev());
+        
         const tothmarton = {
             vezeteknev: "Tóth",
             keresztnev: "Márton",
